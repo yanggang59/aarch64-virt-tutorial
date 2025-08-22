@@ -15,6 +15,6 @@ clean:
 	rm kernel.elf kernel.img *.o >/dev/null 2>/dev/null || true
 
 run:
-	${QEMU_BASE_DIR}/qemu-system-aarch64 -M virt -cpu cortex-a57 \
+	${QEMU_BASE_DIR}qemu-system-aarch64 -M virt -cpu cortex-a57 \
 		-kernel kernel.img -d in_asm \
 		-display none
