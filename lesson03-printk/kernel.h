@@ -21,4 +21,7 @@ typedef _Bool bool;
 
 #define min(a, b) (((a) < (b))? (a) : (b))
 
+#define mmio_write(addr, data) (*(volatile unsigned int *)(addr) = (data))
+#define mmio_read(addr) (*(volatile unsigned int *)(addr))
+
 #endif

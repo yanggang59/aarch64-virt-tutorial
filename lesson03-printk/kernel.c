@@ -1,24 +1,13 @@
 #include "uart.h"
-
-
-static void myputchar(char c)
-{
-    uart_putc(c);
-}
-
-static void myprint(const char *s)
-{
-    while(*s != '\0')
-    {
-        myputchar(*s);
-        s++;
-    }
-}
+#include "printk.h"
 
 void kernel_main(void)
 {
-     myprint("Test UART \r\n");
-     myprint("Hello world!\n");
-     while (1) {
+    uart_init();
+    uart_puts("Hello World!\n");
+    printk("This is a test for printk , 0x%x\n", 5678);
+    while (1)
+    {
+        
 	}
 }

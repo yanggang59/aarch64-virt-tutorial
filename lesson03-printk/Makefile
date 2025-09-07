@@ -1,6 +1,6 @@
 CROSS ?= aarch64-linux-gnu
 QEMU_BASE_DIR ?= /home/thomas/workspace/qemu-8.2.1/install/bin/
-CFLAGS = -g -Wall -nostdlib -nostdinc -O0 -Iinclude
+CFLAGS = -g -Wall -nostdlib -O0 -Iinclude -fno-builtin -ffreestanding -mgeneral-regs-only
 ASMFLAGS = -g -Iinclude -O0
 
 all: clean kernel.img

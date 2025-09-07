@@ -21,6 +21,6 @@ SECTIONS
 	} 
 	bss_end = .;
 	. = ALIGN(4096);
-	. += 0x100000;    /* 1MB of stack memory */
+	. += 0x800000;    /* 1MB of stack memory */
     stack_top = .;
 }
