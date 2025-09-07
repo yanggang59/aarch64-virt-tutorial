@@ -18,6 +18,7 @@ master:
 	sub	x1, x1, x0
 	bl 	memzero
 
-	mov	sp, #LOW_MEMORY 
+	ldr x30, =stack_top
+	mov	sp, x30 
 	bl	kernel_main
 	b 	proc_hang
