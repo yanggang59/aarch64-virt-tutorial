@@ -97,7 +97,6 @@ void printk(const char *format, ...) {
             }
             case 'x': {
                 unsigned int num = __builtin_va_arg(args, unsigned int);
-                uart_puts("0x");
                 print_number(num, 16, 0, width);
                 break;
             }
